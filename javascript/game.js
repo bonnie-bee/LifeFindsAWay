@@ -61,11 +61,13 @@ $("#good").on("click", function(){
     if (score === goal){
         wins++;
         reset();
+        $('#wins').text(wins);
     } 
     
     if (score > goal){
         losses++;
         reset();
+        $('#losses').text(losses);
     }
 
     console.log("score: " + score);
@@ -82,11 +84,13 @@ $("#fine").on("click", function(){
     if (score === goal){
         wins++;
         reset();
+        $('#wins').text(wins);
     } 
     
     if (score > goal){
         losses++;
         reset();
+        $('#losses').text(losses);
     }
 
     console.log("score: " + score);
@@ -102,12 +106,14 @@ $("#sure").on("click", function(){
     if (score === goal){
         wins++;
         reset();
+        $('#wins').text(wins);
     } 
     
     if (score > goal){
         losses++;
         reset();
-    }  
+        $('#losses').text(losses);
+    }
 
     console.log("score: " + score);
 
@@ -123,11 +129,13 @@ $("#whatever").on("click", function(){
     if (score === goal){
         wins++;
         reset();
+        $('#wins').text(wins);
     } 
     
     if (score > goal){
         losses++;
         reset();
+        $('#losses').text(losses);
     }
 
     console.log("score: " + score);
@@ -139,10 +147,12 @@ console.log("losses: " + losses);
 });
 
 
+//show wins and losses on screen
 
-
-
-
+/*let winner = $('<div>')
+winner.attr("class", "wins");
+winner.text("Wins:" + wins);
+$('.instructions').append(winner);*/
 
 
 
