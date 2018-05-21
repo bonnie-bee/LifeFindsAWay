@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>CrYsTaLs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    
+    <div class="container"> 
+        <div class="jumbotron">
+            <h1 class="display-4">CRYSTAL GAME</h1>
+            <p class="lead">A game with crystals</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Instructions</h3>
+                <p class="instructions">The goal of the game is to equal the random number the computer provides. Click on a crystal to increase your score.
+                    Each crystal is assigned a different value. Once your score equals the random number, you win. If you go over the random number,
+                    you lose. At the end of each game the point value of the crystals change, as does the goal number.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row crystals">
+                    <button type="button" class="btn btn-success" id="good">Primary</button>
+                    <button type="button" class="btn btn-primary" id="fine">Primary</button>
+                    <button type="button" class="btn btn-warning" id="sure">Primary</button>
+                    <button type="button" class="btn btn-danger" id="whatever">Primary</button>
+                </div>
+                <div class="row score">
+                    <samp>Your total is <span id="playerScore"></span></samp>
+                </div>
+                <div class="row goal">
+                    <samp>Goal</samp>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="javascript/game.js"></script>
+</body>
+
+</html>
+
+
+
+
+
