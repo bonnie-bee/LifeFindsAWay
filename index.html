@@ -5,7 +5,7 @@
 <head>
     
     <meta charset="UTF-8">
-    <title>CrYsTaLs</title>
+    <title>Dinosaurs</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,35 +17,48 @@
     
     <div class="container"> 
         <div class="jumbotron">
-            <h1 class="display-4">CRYSTAL GAME</h1>
-            <p class="lead">A game with crystals</p>
+            <img class="img-fluid" src="images/jpfont.png" alt="Jurassic park logo">
+            <p class="lead">We need more dinosaurs</p>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" id="leftSide">
                 <h3>Instructions</h3>
-                <p class="instructions">The goal of the game is to equal the random number the computer provides. Click on a crystal to increase your score.
-                    Each crystal is assigned a different value. Once your score equals the random number, you win. If you go over the random number,
-                    you lose. At the end of each game the point value of the crystals change, as does the goal number.
+                <p class="instructions">Jurassic Park needs dinosaurs in their park. On the right you have four dinosaur buttons, each time you click one 
+                    a certain number of dinosaurs will be released into the park. You'll have to figure out how many of each type are released to make sure you don't go 
+                    over the park's dinosaur limit. It's important that we keep the dinosaur numbers under control.
+                    <br>  
+                    <br>  
+                    Each time you hit the exact number of dinosaurs needed, your wins will increase.
+                    Conversely, each time you go over and release too many dinosaurs, your losses increase.
+                    <br>
+                    <br>    
+                    When the game ends, a new amount will be assigned to each dinosaur and the dinosaur limit will change. Good luck explorers.
                 </p>
-                <div class="row win">
-                    <samp>Wins: <span id="wins"></span></samp>
-                </div>
-                <div class="row loss">
-                    <samp>Losses: <span id="losses"></span></samp>
-                </div>
+                
+                
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" id="rightSide">
                 <div class="row crystals">
-                    <button type="button" class="btn btn-success" id="good">Primary</button>
-                    <button type="button" class="btn btn-primary" id="fine">Primary</button>
-                    <button type="button" class="btn btn-warning" id="sure">Primary</button>
-                    <button type="button" class="btn btn-danger" id="whatever">Primary</button>
+                    <button type="button" class="btn btn-success" id="good"></button>
+                    <button type="button" class="btn btn-primary" id="fine"></button>
+                    <button type="button" class="btn btn-warning" id="sure"></button>
+                    <button type="button" class="btn btn-danger" id="whatever"></button>
                 </div>
-                <div class="row score">
-                    <samp>Your total is <span id="playerScore"></span></samp>
+                <br>
+                <div class="row score counter">
+                    <p>Your total is <span id="playerScore"></span></p>
                 </div>
-                <div class="row goal">
-                    <samp>Goal</samp>
+                <br>
+                <div class="row goal counter">
+                    <p>Goal</p>
+                </div>
+                <br>
+                <div class="row win counter">    
+                    <p>Wins: <span id="wins"></span></p>
+                </div>
+                <br>
+                <div class="row loss counter">        
+                    <p>Losses: <span id="losses"></span></p>    
                 </div>
             </div>
         </div>

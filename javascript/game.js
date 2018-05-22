@@ -2,7 +2,7 @@
 
 //Create random number between 19-120; Show the number on the screen
 let goal=(Math.floor(Math.random()*102)+19);
-$('.goal').text('the goal is: ' + goal);
+$('.goal').text('The goal is: ' + goal);
 
 //click on crystal and it adds points to players score
 //create list of numbers
@@ -32,12 +32,13 @@ let score4=(Math.floor(Math.random()*12)+1);
 function reset(){
     
     goal=(Math.floor(Math.random()*102)+19);
-    $('.goal').text('the goal is: ' + goal);
+    $('.goal').text('The goal is: ' + goal);
     score = 0;
     score1=(Math.floor(Math.random()*12)+1);
     score2=(Math.floor(Math.random()*12)+1);
     score3=(Math.floor(Math.random()*12)+1);
     score4=(Math.floor(Math.random()*12)+1);
+    $('#playerScore').text(score);
 }
 
 
@@ -70,11 +71,11 @@ $("#good").on("click", function(){
         $('#losses').text(losses);
     }
 
-    console.log("score: " + score);
+    console.log("inside score: " + score);
 
-    console.log("wins: " + wins);
+    console.log("inside wins: " + wins);
     
-    console.log("losses: " + losses);
+    console.log("inside losses: " + losses);
 });
 
 
@@ -93,11 +94,11 @@ $("#fine").on("click", function(){
         $('#losses').text(losses);
     }
 
-    console.log("score: " + score);
+    console.log("inside score: " + score);
 
-    console.log("wins: " + wins);
+    console.log("inside wins: " + wins);
     
-    console.log("losses: " + losses);
+    console.log("inside losses: " + losses);
 });
 
 $("#sure").on("click", function(){
@@ -115,11 +116,11 @@ $("#sure").on("click", function(){
         $('#losses').text(losses);
     }
 
-    console.log("score: " + score);
+    console.log("inside score: " + score);
 
-    console.log("wins: " + wins);
+    console.log("inside wins: " + wins);
     
-    console.log("losses: " + losses);
+    console.log("inside losses: " + losses);
 });
 
 
@@ -138,11 +139,11 @@ $("#whatever").on("click", function(){
         $('#losses').text(losses);
     }
 
-    console.log("score: " + score);
+    console.log("inside score: " + score);
 
-console.log("wins: " + wins);
+console.log("inside wins: " + wins);
 
-console.log("losses: " + losses);
+console.log("inside losses: " + losses);
 
 });
 

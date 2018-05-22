@@ -1,0 +1,62 @@
+body{
+    background-color: green;
+}
+
+img{
+    width:auto;
+}
+.jumbotron{
+    background-image: url(../images/jungle.jpg);
+    color: white;
+    font-style: bold;
+}
+
+.lead{
+    text-align: center;
+    font-size: 3em;
+}
+
+#leftSide{
+    background-color: #24c20c;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+#rightSide{
+    background-color: #24c20c;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#good{
+    background-image: url(../images/trex1.png);
+    height: 120px;
+    width: 120px;
+}
+
+#fine{
+    background-image: url(../images/brachiosaurus.png);
+    height: 120px;
+    width: 120px;
+}
+
+#sure{
+    background-image: url(../images/Stegosaurus.png);
+    height: 120px;
+    width: 120px;
+}
+
+#whatever{
+    background-image: url(../images/velociraptor.png);
+    height: 120px;
+    width: 120px;
+}
+
+
+
+.counter{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
