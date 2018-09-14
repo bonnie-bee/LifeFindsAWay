@@ -2,7 +2,7 @@
 
 //Create random number between 19-120; Show the number on the screen
 let goal=(Math.floor(Math.random()*102)+19);
-$('.goal').text('We need ' + goal + "new dinosaurs in the park");
+$('.goal').text('We need ' + goal + " new dinosaurs in the park");
 
 //click on crystal and it adds points to players score
 //create list of numbers
@@ -55,36 +55,39 @@ function winLose(){
         losses++;
         reset();
         $('#losses').text(losses);
-        alert("There are too many dinosaurs. They've taken over the park. Get out while you can!")
+        // alert("There are too many dinosaurs. They've taken over the park. Get out while you can!")
+        $('#myModal').modal("show")
     }
 }
 
+
+let life = new Audio('./images/life.m4a');
 
 //assign each crystal a random number
 //on click event to increase score by crystal's assigned number
 //update score total
 $("#good").on("click", function(){
-    score = score+score1;
+    score+=score1;
     $('#playerScore').text(score);
     winLose()
 });
 
 
 $("#fine").on("click", function(){
-    score=score+score2;
+    score+=score2;
     $('#playerScore').text(score);
     winLose()
 });
 
 $("#sure").on("click", function(){
-    score=score+score3;
+    score+=score3;
     $('#playerScore').text(score);
     winLose()
 });
 
 
 $("#whatever").on("click", function(){
-    score=score+score4;
+    score+=score4;
     $('#playerScore').text(score);
     winLose()
 

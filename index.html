@@ -3,19 +3,16 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="UTF-8">
     <title>Dinosaurs</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
 </head>
 
 <body>
-    
-    <div class="container"> 
+
+    <div class="container">
         <div class="jumbotron">
             <img class="img-fluid" src="images/jpfont.png" alt="Jurassic park logo">
             <p class="lead">We need more dinosaurs</p>
@@ -23,22 +20,20 @@
         <div class="row">
             <div class="col-lg-6" id="leftSide">
                 <h3>Instructions</h3>
-                <p class="instructions">Jurassic Park needs more dinosaurs in their park. On the right you have four dinosaur buttons, each time you click one 
-                    a certain number of that dinosaur will be released into the park. You'll have to figure out how many of each type are released to make sure you don't go 
-                    over the park's dinosaur limit. 
+                <p class="instructions">Jurassic Park needs more dinosaurs in their park. On the right you have four dinosaur buttons, each time
+                    you click one a certain number of that dinosaur will be released into the park. You'll have to figure
+                    out how many of each type are released to make sure you don't go over the park's dinosaur limit.
                     <br>
+                    <br> It's important we keep the dinosaur numbers under control.
                     <br>
-                    It's important we keep the dinosaur numbers under control.
-                    <br>  
-                    <br>  
-                    Each time you hit the exact number of dinosaurs needed, your wins will increase.
-                    Conversely, each time you go over and release too many dinosaurs, your losses increase.
+                    <br> Each time you hit the exact number of dinosaurs needed, your wins will increase. Conversely, each time
+                    you go over and release too many dinosaurs, your losses increase.
                     <br>
-                    <br>    
-                    When the game ends, a new amount will be assigned to each dinosaur and the dinosaur limit will change. Good luck explorers.
+                    <br> When the game ends, a new amount will be assigned to each dinosaur and the dinosaur limit will change.
+                    Good luck explorers.
                 </p>
-                
-                
+
+
             </div>
             <div class="col-lg-6" id="rightSide">
                 <div class="row crystals">
@@ -49,29 +44,47 @@
                 </div>
                 <br>
                 <div class="row score counter">
-                    <p>You've released <span id="playerScore"></span> dinosaurs</p>
+                    <p>You've released
+                        <span id="playerScore"></span> dinosaurs</p>
                 </div>
                 <br>
                 <div class="row goal counter">
                     <p>Goal</p>
                 </div>
                 <br>
-                <div class="row win counter">    
-                    <p>Wins: <span id="wins"></span></p>
+                <div class="row win counter">
+                    <p>Wins:
+                        <span id="wins"></span>
+                    </p>
                 </div>
                 <br>
-                <div class="row loss counter">        
-                    <p>Losses: <span id="losses"></span></p>    
+                <div class="row loss counter">
+                    <p>Losses:
+                        <span id="losses"></span>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
- <script src="javascript/game.js"></script>
+
+    <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <p id: "modalP">There are too many dinosaurs! They've taken over!
+                    <br> Flee! Flee for your lives!</p>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modalBtn" onclick="life.play()">Run Away!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="javascript/game.js"></script>
 </body>
 
 </html>
-
-
-
-
-
