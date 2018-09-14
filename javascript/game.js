@@ -7,9 +7,7 @@ $('.goal').text('The goal is: ' + goal);
 //click on crystal and it adds points to players score
 //create list of numbers
 //pull random number
-//assign each crystal a random number
-//on click event to increase score by crystal's assigned number
-//update score total
+
 
 let score = 0;
 let wins = 0;
@@ -20,14 +18,7 @@ let score2=(Math.floor(Math.random()*12)+1);
 let score3=(Math.floor(Math.random()*12)+1);
 let score4=(Math.floor(Math.random()*12)+1);
 
-
-
-
-
-
-
-
-
+//Reset the game after a win or loss
 
 function reset(){
     
@@ -42,23 +33,10 @@ function reset(){
 }
 
 
-
-
-
-
-
-
-
 //win - player's score = random #
 //compare score to #
 //players score = random # -> wins++
-
-
-
-
-$("#good").on("click", function(){
-    score = score+score1;
-    $('#playerScore').text(score);
+function winLose(){
     if (score === goal){
         wins++;
         reset();
@@ -69,81 +47,38 @@ $("#good").on("click", function(){
         losses++;
         reset();
         $('#losses').text(losses);
+        alert("There are too many dinosaurs. They've taken over the park. Get out while you can!")
     }
+}
 
-    console.log("inside score: " + score);
 
-    console.log("inside wins: " + wins);
-    
-    console.log("inside losses: " + losses);
+//assign each crystal a random number
+//on click event to increase score by crystal's assigned number
+//update score total
+$("#good").on("click", function(){
+    score = score+score1;
+    $('#playerScore').text(score);
+    winLose()
 });
 
 
 $("#fine").on("click", function(){
     score=score+score2;
     $('#playerScore').text(score);
-    if (score === goal){
-        wins++;
-        reset();
-        $('#wins').text(wins);
-    } 
-    
-    if (score > goal){
-        losses++;
-        reset();
-        $('#losses').text(losses);
-    }
-
-    console.log("inside score: " + score);
-
-    console.log("inside wins: " + wins);
-    
-    console.log("inside losses: " + losses);
+    winLose()
 });
 
 $("#sure").on("click", function(){
     score=score+score3;
     $('#playerScore').text(score);
-    if (score === goal){
-        wins++;
-        reset();
-        $('#wins').text(wins);
-    } 
-    
-    if (score > goal){
-        losses++;
-        reset();
-        $('#losses').text(losses);
-    }
-
-    console.log("inside score: " + score);
-
-    console.log("inside wins: " + wins);
-    
-    console.log("inside losses: " + losses);
+    winLose()
 });
 
 
 $("#whatever").on("click", function(){
     score=score+score4;
     $('#playerScore').text(score);
-    if (score === goal){
-        wins++;
-        reset();
-        $('#wins').text(wins);
-    } 
-    
-    if (score > goal){
-        losses++;
-        reset();
-        $('#losses').text(losses);
-    }
-
-    console.log("inside score: " + score);
-
-console.log("inside wins: " + wins);
-
-console.log("inside losses: " + losses);
+    winLose()
 
 });
 
@@ -157,42 +92,7 @@ $('.instructions').append(winner);*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-let btnNum = [];
+/*let btnNum = [];
 
 while (btnNum.length<4){
     let randNum = (Math.floor(Math.random()*12)+1);
@@ -200,19 +100,20 @@ while (btnNum.length<4){
     btnNum[btnNum.length]= randNum;
 }
 
-$('#good').attr('id', parseInt(btnNum[0], 10));
-$('#fine').attr('id', parseInt(btnNum[1], 10));
-$('#sure').attr('id', parseInt(btnNum[2], 10));
-$('#whatever').attr('id', parseInt(btnNum[3], 10));
+$('#good').attr('id', btnNum[0]);
+$('#fine').attr('id', btnNum[1]);
+$('#sure').attr('id', btnNum[2]);
+$('#whatever').attr('id', btnNum[3]);
 
 $('.btn').on("click", function(){
     let playNum = $(this).attr('id');
-    score = score + playNum;
+    score = score + parseInt(playNum);
     console.log('inside score' + score)
+    $('#playerScore').text(score);
+    winLose();
 
 });
 
-$('#playerScore').text(score);
 
 console.log(btnNum)*/
 

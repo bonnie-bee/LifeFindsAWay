@@ -29,25 +29,25 @@ img{
     border-bottom-right-radius: 10px;
 }
 
-#good{
+.btn-success{
     background-image: url(../images/trex1.png);
     height: 120px;
     width: 120px;
 }
 
-#fine{
+.btn-primary{
     background-image: url(../images/brachiosaurus.png);
     height: 120px;
     width: 120px;
 }
 
-#sure{
+.btn-warning{
     background-image: url(../images/Stegosaurus.png);
     height: 120px;
     width: 120px;
 }
 
-#whatever{
+.btn-danger{
     background-image: url(../images/velociraptor.png);
     height: 120px;
     width: 120px;
