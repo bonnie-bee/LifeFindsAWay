@@ -2,7 +2,7 @@
 
 //Create random number between 19-120; Show the number on the screen
 let goal=(Math.floor(Math.random()*102)+19);
-$('.goal').text('The goal is: ' + goal);
+$('.goal').text('We need ' + goal + "new dinosaurs in the park");
 
 //click on crystal and it adds points to players score
 //create list of numbers
@@ -21,7 +21,7 @@ let score3=(Math.floor(Math.random()*12)+1);
 let score4=(Math.floor(Math.random()*12)+1);
 
 
-
+$('#playerScore').text(score);
 
 
 
