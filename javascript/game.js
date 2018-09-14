@@ -31,7 +31,7 @@ $('#playerScore').text(score);
 function reset(){
     
     goal=(Math.floor(Math.random()*102)+19);
-    $('.goal').text('The goal is: ' + goal);
+    $('.goal').text('We need ' + goal + " new dinosaurs in the park");
     score = 0;
     score1=(Math.floor(Math.random()*12)+1);
     score2=(Math.floor(Math.random()*12)+1);
